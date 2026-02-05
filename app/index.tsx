@@ -13,14 +13,14 @@ export default function Index() {
     <View style={styles.container}>
       <View style={styles.displaycontainer}>
         <Image
-          source={require("../assets/images/taxipic.png")}
+          source={require("../assets/images/taxicartoon.png")}
           style={styles.img}
           resizeMode="contain"
         />
         <Text style={[styles.txt, { fontSize: 30, color: "#444242" }]}>
           TAXI METER
         </Text>
-        <Text style={[styles.txt, { fontSize: 14, color: "#9fad1b" }]}>
+        <Text style={[styles.txt, { fontSize: 14, color: "#c8d836" }]}>
           THAI FARE CALCULATOR
         </Text>
         <ActivityIndicator
