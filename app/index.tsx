@@ -1,4 +1,5 @@
-import React from "react";
+import { router } from "@/.expo/types/router";
+import React, { useEffect } from "react";
 import {
   ActivityIndicator,
   Image,
@@ -9,6 +10,12 @@ import {
 } from "react-native";
 
 export default function Index() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.replace("/taxical");
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
   const { width, height } = useWindowDimensions();
 
   const isTablet = width >= 768;
@@ -59,31 +66,6 @@ export default function Index() {
 
         <ActivityIndicator size="large" style={{ marginTop: height * 0.05 }} />
       </View>
-
-      <View
-        style={{
-          marginTop: height * 0.03,
-          alignItems: "center",
-        }}
-      >
-        <Text
-          style={[
-            styles.footertxt,
-            { fontSize: isTablet ? width * 0.025 : width * 0.035 },
-          ]}
-        >
-          ID : 6652410030
-        </Text>
-
-        <Text
-          style={[
-            styles.footertxt,
-            { fontSize: isTablet ? width * 0.025 : width * 0.035 },
-          ]}
-        >
-          NAME : Bannaruj Limsomwong
-        </Text>
-      </View>
     </View>
   );
 }
@@ -110,10 +92,5 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontFamily: "Kanit_700Bold",
     textAlign: "center",
-  },
-
-  footertxt: {
-    color: "#5f5f5f",
-    fontWeight: "bold",
   },
 });
