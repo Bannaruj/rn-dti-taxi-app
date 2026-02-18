@@ -4,7 +4,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/kanit";
 import { SplashScreen, Stack } from "expo-router";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     Kanit_400Regular,

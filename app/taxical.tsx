@@ -136,6 +136,10 @@ export default function Taxical() {
           </View>
         </View>
       </View>
+      <View style={{ alignItems: "center" }}>
+        <Text style={styles.footertxt}>ID : 6652410030 </Text>
+        <Text style={styles.footertxt}>NAME : Bannaruj Limsomwong </Text>
+      </View>
     </View>
   );
 }
@@ -219,5 +223,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     width: "100%",
     alignItems: "center",
+  },
+
+  footertxt: {
+    color: "#5f5f5f",
+    fontWeight: "bold",
+    fontSize: 15,
   },
 });
